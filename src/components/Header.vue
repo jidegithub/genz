@@ -17,31 +17,39 @@
 
     <nav class="user-nav">
       <div class="user-nav__icon-box">
-        <svg xmlns="http://www.w3.org/2000/svg" class="user-nav__icon icon icon-tabler icon-tabler-plus" width="20" height="20" viewBox="0 0 20 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="user-nav__icon icon icon-tabler icon-tabler-bolt" width="20" height="20" viewBox="0 0 20 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z"/>
-          <line x1="12" y1="5" x2="12" y2="19"/>
-          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="13 3 13 10 19 10 11 21 11 14 5 14 13 3"/>
         </svg>
       </div>
       <div class="user-nav__icon-box">
-        <svg xmlns="http://www.w3.org/2000/svg" class="user-nav__icon icon icon-tabler icon-tabler-plus" width="20" height="20" viewBox="0 0 20 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="user-nav__icon icon icon-tabler icon-tabler-circle-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z"/>
-          <line x1="12" y1="5" x2="12" y2="19"/>
-          <line x1="5" y1="12" x2="19" y2="12"/>
+          <circle cx="12" cy="12" r="9"/>
+          <line x1="9" y1="12" x2="15" y2="12"/>
+          <line x1="12" y1="9" x2="12" y2="15"/>
         </svg>
       </div>
       <div class="user-nav__user">
-        <div class="circle">
-          <p class="text-brand">F</p>
-        </div>
+        <FirstChar :character="char" />
       </div>
     </nav>
   </header>
 </template>
 
 <script>
-export default {
+import FirstChar from './FirstChar.vue';
 
+export default {
+  name: 'headers',
+  components: {
+    FirstChar,
+  },
+  data() {
+    return {
+      char: 'F',
+    };
+  },
 };
 </script>
 
@@ -69,7 +77,7 @@ export default {
     color: inherit;
     background-color: var(--color-grey-light-2);
     border: none;
-    padding: .7rem 2rem;
+    padding: 1.1rem 2rem;
     border-radius: 7px;
     width: 87%;
     transition: all .2s;
@@ -159,21 +167,6 @@ export default {
     height: 3.75rem;
     border-radius: 50%;
     margin-right: 1rem;
-  }
-}
-.circle {
-  border: 0.1em solid #E2E8F0;
-  background-color: #E2E8F0;
-  border-radius: 100%;
-  height: 1.5em;
-  width: 1.5em;
-  text-align: center;
-
-  & p {
-    margin-top: -1px;
-    font-size: 1em;
-    font-weight: bold;
-    font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;;
   }
 }
 </style>

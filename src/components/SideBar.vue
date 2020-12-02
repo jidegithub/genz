@@ -105,6 +105,12 @@ export default {
       padding: 1rem 3rem;
     }
 
+    &:last-child {
+      .side-nav__link{
+        padding: .2rem 3rem;
+      }
+    }
+
     @media only screen and (max-width: $bp-medium) {
       display: flex;
       margin: 0;
@@ -156,7 +162,7 @@ export default {
     color: var(--color-grey-dark-1);
     text-decoration: none;
     display: block;
-    padding: 1rem 3rem;
+    padding: 1.5rem 3rem;
     border-radius: 5px;
     position: relative;
     z-index: 10;
