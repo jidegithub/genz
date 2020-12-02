@@ -159,7 +159,6 @@ export default {
     background-color: var(--color-primary-light);
   }
   &__link:hover, &__item--active{
-    font-weight: 700;
     color: var(--new-nav-dark-grey);
   }
 
@@ -191,7 +190,8 @@ export default {
   &__icon {
     width: 1.75rem;
     height: 1.75rem;
-    margin-right: 2rem;
+    // margin-right: 2rem;
+    margin-right: .9rem;
     fill: currentColor;
 
     @media only screen and (max-width: $bp-small) {
