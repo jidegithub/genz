@@ -61,9 +61,7 @@ export default {
 
 .search {
   flex: 0 0 40%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
 
   @media only screen and (max-width: $bp-smallest) {
     order: 1;
@@ -140,8 +138,7 @@ export default {
 
 .user-nav {
   align-self: stretch;
-  display: flex;
-  align-items: center;
+  @include flex-vertical-center;
   justify-content: flex-end;
   flex: 0 0 55%;
 
@@ -149,8 +146,7 @@ export default {
     padding: 0 .4rem;
     cursor: pointer;
     height: 100%;
-    display: flex;
-    align-items: center;
+    @include flex-horizontal-center;
   }
 
   & > *:hover {
@@ -177,9 +173,7 @@ export default {
     position: absolute;
     top: 1.5rem;
     right: 1.1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
   }
 
   &__user-photo {

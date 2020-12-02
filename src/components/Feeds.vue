@@ -64,6 +64,20 @@
               about me, since i'm a man over the age of 37. it's those those darn
               millenials, raised on shrieking commercials and brain-rotting soda pop, that they
               wish to woo.
+              wish to woo.
+              about me, since i'm a man over the age of 37. it's those those darn
+              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
+              wish to woo.
+              wish to woo.
+              about me, since i'm a man over the age of 37. it's those those darn
+              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
+              wish to woo.
+              wish to woo.
+              about me, since i'm a man over the age of 37. it's those those darn
+              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
+              wish to woo.
+              wish to woo.
+              about me, since i'm a man over the age of 37. it's those those darn
               </p>
               <section class="card_interact">
                 <button class="btn card_btn">Repost</button>
@@ -122,6 +136,10 @@ export default {
   // grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 9px;
   grid-row-gap: 9px;
+  @media only screen and (max-width: $bp-between) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .late-night { grid-area: 1 / 2 / 4 / 3; }
@@ -141,18 +159,6 @@ export default {
   display: flex;
   height: 100%;
 }
-
-@media (min-width: 40rem) {
-  .cards_item {
-    // width: 77%;
-  }
-}
-
-// @media (min-width: 56rem) {
-//   .cards_item {
-//     width: 33.3333%;
-//   }
-// }
 
 .card {
   background-color: white;
@@ -255,12 +261,11 @@ export default {
     -webkit-justify-content: space-between;
     justify-content: space-between;
     flex-wrap: wrap;
-    min-width: 320px;
+    // min-width: 320px;
     max-width: 1220px;
   }
   .flex-item {
-    display:flex;
-    align-items: center;
+    @include flex-horizontal-center;
     // height: 120px;
     width: 235px;
     // background-color: #e46119;
@@ -288,9 +293,9 @@ export default {
       width: 55%;
     }
     & span{
-      display: flex;
+      @include flex-horizontal-center;
       justify-content: flex-start;
-      align-items: center;
+
       & button{
         background-color: var(--primary-color);
         color: var(--color-grey-light-1);
@@ -306,9 +311,7 @@ export default {
         height: 30px;
         font-size: 1.5rem;
         & span{
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          @include flex-center;
         }
       }
       & p{

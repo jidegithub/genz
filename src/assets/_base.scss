@@ -7,8 +7,6 @@
 		--nav-logo-color: #A2A2A2;
 		--first-char-black: #070707;
 
-
-
     --color-grey-light-1: #faf9f9;
     --color-grey-light-2: #f4f2f2;
 		--color-grey-light-3: #f0eeee;
@@ -28,8 +26,31 @@
 $bp-largest: 75em;     // 1200px
 $bp-large: 68.75em;    // 1100px
 $bp-medium: 56.25em;   // 900px
+$bp-between: 43.75em;   // 700px
 $bp-small: 37.5em;     // 600px
 $bp-smallest: 31.25em; // 500px
+
+@mixin flex-center {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+@mixin flex-vertical-center {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+@mixin flex-horizontal-center {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+}
 
 * {
   margin: 0;
@@ -88,9 +109,8 @@ img {
 	height: 7rem;
 	background-color: #fff;
 	border-bottom: var(--line);
-	display: flex;
+	@include flex-horizontal-center;
 	justify-content: flex-start;
-	align-items: center;
 
 	@media only screen and (max-width: $bp-smallest) {
 		flex-wrap: wrap;

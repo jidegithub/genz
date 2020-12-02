@@ -37,9 +37,7 @@ export default {
   background-color: var(--first-char-black);
   border-radius: 100%;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
 
   & p {
     margin-top: -1px;

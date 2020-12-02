@@ -17,8 +17,9 @@
         </a>
       </li>
     </ul>
+    <h3 class="source_listings_out">Sources</h3>
     <ul class="side-nav">
-      <h3>Sources</h3>
+      <h3 class="source_listings_in">Sources</h3>
       <li class="side-nav__item">
         <a href="#" class="side-nav__link">
           <svg xmlns="http://www.w3.org/2000/svg" class="side-nav__icon icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -95,6 +96,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .source_listings_out{
+    display: none;
+  }
   .side-nav {
     font-size: 1.4rem;
     list-style: none;
@@ -117,6 +121,23 @@ export default {
     @media only screen and (max-width: $bp-medium) {
       display: flex;
       margin: 0;
+      &:last-child {
+        overflow: scroll;
+        .side-nav__link{
+          // padding: 0;
+        };
+      }
+      & ~ h3.source_listings_out{
+        display: block;
+        font-size: 1.5rem;
+        font-family: 'Lato', sans-serif;
+        font-weight: 700;
+        padding: 1rem 3rem;
+        color: var(--new-nav-dark-grey);
+      }
+      .source_listings_in{
+        display: none;
+      }
     }
 
   &__item {
@@ -158,8 +179,11 @@ export default {
   &__item:active::before {
     background-color: var(--color-primary-light);
   }
-  &__link:hover, &__item--active{
-    color: var(--new-nav-dark-grey);
+  &__item--active{
+    font-weight: 700;
+    & a{
+      color: #313131!important;
+    }
   }
 
   &__link:link,
@@ -172,8 +196,7 @@ export default {
     border-radius: 5px;
     position: relative;
     z-index: 10;
-    display: flex;
-    align-items: center;
+    @include flex-horizontal-center;
     font-size: 1.5rem;
 
     @media only screen and (max-width: $bp-medium) {
