@@ -26,7 +26,7 @@ export default {
 <style lang="scss" scoped>
   .content {
     display: flex;
-    height: 90vh;
+    // height: 90vh;
     background-color: var(--color-grey-light-2);
 
     @media only screen and (max-width: $bp-medium) {

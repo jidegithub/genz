@@ -1,6 +1,6 @@
 <template>
   <main class="feed-main">
-    <div class="grid-container">
+    <!-- <div class="grid-container">
       <div class="late-night">
         <li class="cards_item">
           <div class="card">
@@ -32,10 +32,105 @@
         youtube
       </div>
       <div class="silicon">
-        silicon
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_profile">
+                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://images.unsplash.com/photo-1500522144261-ea64433bbe27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+                </div>
+                <div>
+                  <p class="card_profile_name">Khan Academy</p>
+                </div>
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Late night Ideas</h2>
+              <p class="card_text">The other possibilty is that tilt doesn't give a shit
+              about me, since i'm a man over the age of 37. it's those those darn
+              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
+              wish to woo.
+              </p>
+              <button class="btn card_btn">Repost</button> .
+              <button class="btn card_btn">Share</button>
+              <section class="card_comment_box">
+                <FirstChar :character="char" :width="1.9" :height="1.9" :fontSize="2"/>
+                <input type="text" class="search__input" placeholder="Add a comment">
+              </section>
+            </div>
+          </div>
+        </li>
       </div>
       <div class="search">
         search
+      </div>
+    </div> -->
+    <div class="grid-container">
+      <div class="search"> search</div>
+      <div class="late-night">
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_profile">
+                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://images.unsplash.com/photo-1500522144261-ea64433bbe27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+                </div>
+                <div>
+                  <p class="card_profile_name">Khan Academy</p>
+                </div>
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Late night Ideas</h2>
+              <p class="card_text">The other possibilty is that tilt doesn't give a shit
+              about me, since i'm a man over the age of 37. it's those those darn
+              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
+              wish to woo.
+              </p>
+              <button class="btn card_btn">Repost</button> .
+              <button class="btn card_btn">Share</button>
+              <section class="card_comment_box">
+                <FirstChar :character="char" :width="1.9" :height="1.9" :fontSize="2"/>
+                <input type="text" class="search__input" placeholder="Add a comment">
+              </section>
+            </div>
+          </div>
+        </li>
+      </div>
+      <div class="silicon">
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_profile">
+                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://images.unsplash.com/photo-1500522144261-ea64433bbe27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+                </div>
+                <div>
+                  <p class="card_profile_name">A Silicon Valley adventure</p>
+                </div>
+            </div>
+            <div class="card_content">
+              <h2 class="card_title">Late night Ideas</h2>
+              <p class="card_text">The other possibilty is that tilt doesn't give a shit
+              about me, since i'm a man over the age of 37. it's those those darn
+              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
+              wish to woo.
+              </p>
+              <button class="btn card_btn">Repost</button> .
+              <button class="btn card_btn">Share</button>
+              <section class="card_comment_box">
+                <FirstChar :character="char" :width="1.9" :height="1.9" :fontSize="2"/>
+                <input type="text" class="search__input" placeholder="Add a comment">
+              </section>
+            </div>
+          </div>
+        </li>
+      </div>
+      <div class="youtube">
+        <li class="cards_item">
+          <div class="card">
+            <div class="card_profile">
+                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://images.unsplash.com/photo-1500522144261-ea64433bbe27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+                </div>
+                <div>
+                  <p class="card_profile_name">Youtube</p>
+                </div>
+            </div>
+            <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+          </div>
+        </li>
       </div>
     </div>
   </main>
@@ -58,38 +153,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .grid-container {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 9px;
-    grid-template-areas:
-      "search late-night"
-      "silicon youtube";
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 9px;
+  grid-row-gap: 9px;
 }
 
-.late-night { grid-area: late-night; }
+.late-night { grid-area: 1 / 2 / 4 / 3; }
+.silicon { grid-area: 2 / 1 / 6 / 2; }
+.youtube { grid-area: 4 / 2 / 6 / 3; }
 
-.youtube { grid-area: youtube; }
-
-.silicon { grid-area: silicon; }
-
-.search { grid-area: search; }
+.search {
+  grid-area: 1 / 1 / 2 / 2;
+  height:20px;
+  background: red;
+  }
 
 .feed-main{
   display: flex;
   flex: 0 0 82%;
+  padding: 1.7rem;
 }
 .cards_item {
   display: flex;
-  padding: 1rem;
   height: 100%;
 }
 
 @media (min-width: 40rem) {
   .cards_item {
-    width: 77%;
+    // width: 77%;
   }
 }
 
@@ -106,11 +200,11 @@ export default {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  padding: 1rem 1.3rem;
+  // padding: 1rem 1.3rem;
   &_profile{
     display: flex;
     align-items: center;
-    padding:.9rem 1rem;
+    padding: 1.2rem 1rem;
     &_name{
       margin-left: 1.4rem;
       font-size: 1.7rem;
@@ -125,7 +219,7 @@ export default {
     }
   }
   &_content {
-    padding: 1rem;
+    padding: 1.2rem 2rem;
     text-align: left;
   }
   &_title {
