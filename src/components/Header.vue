@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div>
-      <img src="../assets/logo.png" alt="trillo logo" class="logo">
+      <img src="../assets/logoII.png" alt="edtwist logo" class="logo">
     </div>
     <form action="#" class="search">
       <input type="text" class="search__input" placeholder="Generate Y">
@@ -119,6 +119,9 @@ export default {
 .help{
   color: var(--help-grey);
   font-weight: 300;
+  @media only screen and (max-width: $bp-smallest) {
+    margin-left: 2rem;
+  }
 }
 .icon-tabler-circle-plus{
   & circle{
@@ -140,7 +143,7 @@ export default {
   align-self: stretch;
   @include flex-vertical-center;
   justify-content: flex-end;
-  flex: 0 0 55%;
+  flex: 0 0 52%;
 
   & > * {
     padding: 0 .4rem;

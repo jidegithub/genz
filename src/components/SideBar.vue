@@ -4,6 +4,7 @@
       <li class="side-nav__item side-nav__item--active">
         <a href="#" class="side-nav__link">
           <span>All</span>
+          <span class="result_view">34 results</span>
         </a>
       </li>
       <li class="side-nav__item">
@@ -18,70 +19,46 @@
       </li>
     </ul>
     <h3 class="source_listings_out">Sources</h3>
-    <ul class="side-nav">
+    <ul class="side-nav second">
       <h3 class="source_listings_in">Sources</h3>
       <li class="side-nav__item">
-        <a href="#" class="side-nav__link">
-          <svg xmlns="http://www.w3.org/2000/svg" class="side-nav__icon icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z"/>
-            <line x1="12" y1="5" x2="12" y2="19"/>
-            <line x1="5" y1="12" x2="19" y2="12"/>
-          </svg>
+        <a href="#" class="side-nav__link second">
+          <img src="../assets/edtwist.png" class="side-nav__icon" alt="edtwist">
           <span>edtwist</span>
         </a>
       </li>
 
       <li class="side-nav__item">
-        <a href="#" class="side-nav__link">
-          <svg xmlns="http://www.w3.org/2000/svg" class="side-nav__icon icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z"/>
-            <line x1="12" y1="5" x2="12" y2="19"/>
-            <line x1="5" y1="12" x2="19" y2="12"/>
-          </svg>
+        <a href="#" class="side-nav__link second">
+          <img src="../assets/google.png" class="side-nav__icon" alt="google">
           <span>Google</span>
         </a>
       </li>
 
       <li class="side-nav__item">
-        <a href="#" class="side-nav__link">
-          <svg xmlns="http://www.w3.org/2000/svg" class="side-nav__icon icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z"/>
-            <line x1="12" y1="5" x2="12" y2="19"/>
-            <line x1="5" y1="12" x2="19" y2="12"/>
-          </svg>
+        <a href="#" class="side-nav__link second">
+          <img src="../assets/youtubeII.png" class="side-nav__icon" alt="youtube">
           <span>Youtube</span>
         </a>
       </li>
 
       <li class="side-nav__item">
-        <a href="#" class="side-nav__link">
-          <svg xmlns="http://www.w3.org/2000/svg" class="side-nav__icon icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z"/>
-            <line x1="12" y1="5" x2="12" y2="19"/>
-            <line x1="5" y1="12" x2="19" y2="12"/>
-          </svg>
+        <a href="#" class="side-nav__link second">
+          <img src="../assets/wikipedia.png" class="side-nav__icon" alt="wikipedia">
           <span>WikiPedia</span>
         </a>
       </li>
 
       <li class="side-nav__item">
-        <a href="#" class="side-nav__link">
-          <svg xmlns="http://www.w3.org/2000/svg" class="side-nav__icon icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z"/>
-            <line x1="12" y1="5" x2="12" y2="19"/>
-            <line x1="5" y1="12" x2="19" y2="12"/>
-          </svg>
+        <a href="#" class="side-nav__link second">
+          <img src="../assets/khanII.png" class="side-nav__icon" alt="khan II">
           <span>Khan Academy</span>
         </a>
       </li>
 
       <li class="side-nav__item">
-        <a href="#" class="side-nav__link">
-          <svg xmlns="http://www.w3.org/2000/svg" class="side-nav__icon icon icon-tabler icon-tabler-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z"/>
-            <line x1="12" y1="5" x2="12" y2="19"/>
-            <line x1="5" y1="12" x2="19" y2="12"/>
-          </svg>
+        <a href="#" class="side-nav__link second">
+          <img src="../assets/nypl.png" class="side-nav__icon" alt="new york public library">
           <span>New York Public Library</span>
         </a>
       </li>
@@ -98,6 +75,9 @@ export default {
 <style lang="scss" scoped>
   .source_listings_out{
     display: none;
+  }
+  .result_view{
+    color: var(--color-grey-dark-2);
   }
   .side-nav {
     font-size: 1.4rem;
@@ -140,20 +120,20 @@ export default {
       }
     }
 
-  &__item {
-    position: relative;
-    &:not(:last-child) {
-      margin-bottom: .5rem;
+    &__item {
+      position: relative;
+      &:not(:last-child) {
+        margin-bottom: .5rem;
+
+        @media only screen and (max-width: $bp-medium) {
+          margin: 0;
+        }
+      }
 
       @media only screen and (max-width: $bp-medium) {
-        margin: 0;
+        flex: 1;
       }
     }
-
-    @media only screen and (max-width: $bp-medium) {
-      flex: 1;
-    }
-  }
 
   &__item::before {
     content: "";
@@ -184,8 +164,10 @@ export default {
     & a{
       color: #313131!important;
     }
+    & .side-nav__link{
+      justify-content: space-between;
+    }
   }
-
   &__link:link,
   &__link:visited {
     font-family: 'Lato', sans-serif;
@@ -198,10 +180,26 @@ export default {
     z-index: 10;
     @include flex-horizontal-center;
     font-size: 1.5rem;
+    font-weight: 600;
 
     @media only screen and (max-width: $bp-medium) {
       justify-content: center;
       padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 1.5rem .5rem;
+    }
+  }
+
+  &__link.second:link,
+  &__link.second:visited {
+    @media only screen and (max-width: $bp-medium) {
+      justify-content: center;
+      padding: 2rem;
+      width: max-content;
     }
 
     @media only screen and (max-width: $bp-small) {
