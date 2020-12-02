@@ -26,7 +26,7 @@
             <line x1="12" y1="5" x2="12" y2="19"/>
             <line x1="5" y1="12" x2="19" y2="12"/>
           </svg>
-          <span>Tours</span>
+          <span>edtwist</span>
         </a>
       </li>
 
@@ -37,7 +37,7 @@
             <line x1="12" y1="5" x2="12" y2="19"/>
             <line x1="5" y1="12" x2="19" y2="12"/>
           </svg>
-          <span>Tours</span>
+          <span>Google</span>
         </a>
       </li>
 
@@ -48,7 +48,7 @@
             <line x1="12" y1="5" x2="12" y2="19"/>
             <line x1="5" y1="12" x2="19" y2="12"/>
           </svg>
-          <span>Tours</span>
+          <span>Youtube</span>
         </a>
       </li>
 
@@ -59,7 +59,7 @@
             <line x1="12" y1="5" x2="12" y2="19"/>
             <line x1="5" y1="12" x2="19" y2="12"/>
           </svg>
-          <span>Tours</span>
+          <span>WikiPedia</span>
         </a>
       </li>
 
@@ -70,7 +70,7 @@
             <line x1="12" y1="5" x2="12" y2="19"/>
             <line x1="5" y1="12" x2="19" y2="12"/>
           </svg>
-          <span>Tours</span>
+          <span>Khan Academy</span>
         </a>
       </li>
 
@@ -81,7 +81,7 @@
             <line x1="12" y1="5" x2="12" y2="19"/>
             <line x1="5" y1="12" x2="19" y2="12"/>
           </svg>
-          <span>Tours</span>
+          <span>New York Public Library</span>
         </a>
       </li>
     </ul>
@@ -102,7 +102,10 @@ export default {
 
     & h3 {
       text-align: left;
+      font-family: 'Lato', sans-serif;
+      font-weight: 700;
       padding: 1rem 3rem;
+      color: var(--new-nav-dark-grey);
     }
 
     &:last-child {
@@ -118,7 +121,6 @@ export default {
 
   &__item {
     position: relative;
-
     &:not(:last-child) {
       margin-bottom: .5rem;
 
@@ -139,8 +141,8 @@ export default {
     left: 0;
     height: 100%;
     width: 3px;
-    border-radius: 4px;
-    background-color: var(--color-primary);
+    border-radius: 7px;
+    background-color: var(--color-grey-light-5);
     transform: scaleY(0);
     transition: transform .2s,
     width .4s cubic-bezier(1,0,0,1) .2s,
@@ -156,18 +158,24 @@ export default {
   &__item:active::before {
     background-color: var(--color-primary-light);
   }
+  &__link:hover, &__item--active{
+    font-weight: 700;
+    color: var(--new-nav-dark-grey);
+  }
 
   &__link:link,
   &__link:visited {
-    color: var(--color-grey-dark-1);
+    font-family: 'Lato', sans-serif;
+    color: var(--color-grey-dark-2);
     text-decoration: none;
     display: block;
-    padding: 1.5rem 3rem;
+    padding: 1rem 3rem;
     border-radius: 5px;
     position: relative;
     z-index: 10;
     display: flex;
     align-items: center;
+    font-size: 1.5rem;
 
     @media only screen and (max-width: $bp-medium) {
       justify-content: center;

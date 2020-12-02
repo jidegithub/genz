@@ -3,7 +3,7 @@
   width: width + 'em',
   height: height + 'em',
   fontSize: fontSize + 'rem' }">
-    <p class="text-brand">{{character}}</p>
+    <p class="circle_char">{{character}}</p>
   </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
 <style lang="scss" scoped>
   .circle {
   border: 0.1em solid #E2E8F0;
-  background-color: #E2E8F0;
+  background-color: var(--first-char-black);
   border-radius: 100%;
   text-align: center;
   display: flex;
@@ -44,6 +44,7 @@ export default {
   & p {
     margin-top: -1px;
     font-size: 1em;
+    color: var(--color-grey-light-2);
     font-weight: bold;
     font-family: Poppins, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;;
   }

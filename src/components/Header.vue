@@ -13,25 +13,25 @@
         </svg>
       </button>
     </form>
-    <p>Help</p>
+    <p class="help">Help</p>
 
     <nav class="user-nav">
       <div class="user-nav__icon-box">
-        <svg xmlns="http://www.w3.org/2000/svg" class="user-nav__icon icon icon-tabler icon-tabler-bolt" width="20" height="20" viewBox="0 0 20 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bolt" width="18" height="18" viewBox="0 0 20 20" stroke-width="1" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z"/>
           <polyline points="13 3 13 10 19 10 11 21 11 14 5 14 13 3"/>
         </svg>
       </div>
       <div class="user-nav__icon-box">
-        <svg xmlns="http://www.w3.org/2000/svg" class="user-nav__icon icon icon-tabler icon-tabler-circle-plus" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class=" icon icon-tabler icon-tabler-circle-plus" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z"/>
-          <circle cx="12" cy="12" r="9"/>
-          <line x1="9" y1="12" x2="15" y2="12"/>
+          <circle fill="#7A65FF" cx="12" cy="12" r="9"/>
+          <line x1="9" y1="12" fill="#fff" x2="15" y2="12"/>
           <line x1="12" y1="9" x2="12" y2="15"/>
         </svg>
       </div>
       <div class="user-nav__user">
-        <FirstChar :character="char" />
+        <FirstChar :character="char" :width="1.5" :height="1.5" :fontSize="2" />
       </div>
     </nav>
   </header>
@@ -118,6 +118,25 @@ export default {
     // fill: var(--color-grey-dark-3);
   }
 }
+.help{
+  color: var(--help-grey);
+  font-weight: 300;
+}
+.icon-tabler-circle-plus{
+  & circle{
+    color: #7A65FF;
+  }
+  & line{
+    color: #fff;
+  }
+}
+.icon-tabler-bolt{
+  color:#A2A2A2;
+  & polyline{
+    fill: var(--color-grey-light-4);
+    color: var(--color-grey-light-4);
+  }
+}
 
 .user-nav {
   align-self: stretch;
@@ -127,7 +146,7 @@ export default {
   flex: 0 0 55%;
 
   & > * {
-    padding: 0 2rem;
+    padding: 0 .4rem;
     cursor: pointer;
     height: 100%;
     display: flex;
