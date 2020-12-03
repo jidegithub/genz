@@ -8,11 +8,8 @@ Vue.config.productionTip = false;
 
 const gauthOption = {
   clientId: process.env.VUE_APP_CLIENT_ID,
-  // scope: 'profile email',
-  // prompt: 'select_account',
-  scope: 'email',
-  prompt: 'consent',
-  fetch_basic_profile: false,
+  scope: 'profile email',
+  prompt: 'select_account',
 };
 
 Vue.use(GAuth, gauthOption);

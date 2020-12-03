@@ -70,14 +70,6 @@ export default {
       notificationMsg: '',
     };
   },
-  created() {
-    const that = this;
-    const checkGauthLoad = setInterval(function () {
-      that.isInit = that.$gAuth.isInit;
-      that.isSignIn = that.$gAuth.isAuthorized;
-      if (that.isInit) clearInterval(checkGauthLoad);
-    }, 1000);
-  },
   methods: {
     OnGoogleAuthSuccess(idToken) {
       this.$router.push('/dashboard');
@@ -88,36 +80,6 @@ export default {
     },
     OnGoogleAuthFail(error) {
       console.log(error);
-    },
-    async handleClickSignIn() {
-      try {
-        const googleUser = await this.$gAuth.signIn();
-        if (!googleUser) {
-          return null;
-        }
-        console.log('googleUser', googleUser);
-        console.log('getId', googleUser.getId());
-        console.log('getBasicProfile', googleUser.getBasicProfile());
-        console.log('getAuthResponse', googleUser.getAuthResponse());
-        console.log(
-          'getAuthResponse',
-          this.$gAuth.GoogleAuth.currentUser.get().getAuthResponse(),
-        );
-        this.isSignIn = this.$gAuth.isAuthorized;
-      } catch (error) {
-        //on fail do something
-        console.error(error);
-        return null;
-      }
-    },
-    async handleClickSignOut() {
-      try {
-        await this.$gAuth.signOut();
-        this.isSignIn = this.$gAuth.isAuthorized;
-        console.log('isSignIn', this.$gAuth.isAuthorized);
-      } catch (error) {
-        console.error(error);
-      }
     },
     handleFormSubmit() {
     },
