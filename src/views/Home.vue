@@ -39,7 +39,7 @@
         </div>
 
         <div class="social-container">
-          <button v-google-signin-button="clientId" class="google-signin-button social"></button>
+          <button v-google-signin-button="clientId" class="google-signin-button social">
             <img src="../assets/search.svg" alt="google logo">
           </button>
           <button class="social"><img src="../assets/linkedin.svg" alt="linkedin"></button>

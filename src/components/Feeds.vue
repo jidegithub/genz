@@ -212,6 +212,8 @@ export default {
   }
   &_btn{
     font-size: 1.6rem;
+    border: none;
+    background: none;
     padding: 1rem 0;
     font-family: 'Lato', sans-serif;
     color: var(--primary-color);
