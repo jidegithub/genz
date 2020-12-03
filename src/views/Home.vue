@@ -9,9 +9,9 @@
         class='form'
       >
       <div class='brand'></div>
-      <h2 class=''>Sign into your account</h2>
-        <label class='' for='email'>Email Address</label>
+      <h2 class=''>Log in into your account</h2>
         <div class='form__field'>
+          <label class='' for='email'>Email Address</label>
           <input
             type='email'
             placeholder='info@mailaddress.com'
@@ -20,8 +20,8 @@
           />
         </div>
 
-        <label class='' for='password'>Password</label>
         <div class='form__field'>
+          <label class='' for='password'>Password</label>
           <input
             type='password'
             name='password'
@@ -31,9 +31,15 @@
         </div>
 
         <div class='form__field'>
-          <button class='primary' type='submit'>
+          <button class='btn primary' type='submit'>
             <span>Login</span>
           </button>
+        </div>
+
+        <div class='form_signup'>
+          <p>
+            or Log in using
+          </p>
         </div>
 
         <div class='social-container'>
@@ -42,11 +48,6 @@
             <img src='../assets/search.svg' alt='google logo'>
           </button>
           <button class='social'><img src='../assets/linkedin.svg' alt='linkedin'></button>
-        </div>
-        <div class='form_signup'>
-          <p>
-            Don't have an account? <a to='/signup'>Signup here</a>
-          </p>
         </div>
       </form>
     </div>
@@ -112,7 +113,6 @@ export default {
   input {
     outline: 0;
     padding: 0.5rem 1rem;
-    color: #c0ccc6;
     width: 300px;
     height: 30px;
   }
@@ -154,8 +154,8 @@ display: inline-flex;
 justify-content: center;
 align-items: center;
 margin: 0 5px;
-height: 35px;
-width: 35px;
+height: 45px;
+width: 45px;
 cursor: pointer;
 }
 
@@ -194,5 +194,33 @@ button {
   padding: 0.2rem 1rem;
   font-size: 12px;
   font-weight: bold;
+}
+.btn {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background: none;
+	cursor: pointer;
+	padding: 25px 80px;
+	display: inline-block;
+	// margin: 15px 30px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+	outline: none;
+	position: relative;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
 }
 </style>

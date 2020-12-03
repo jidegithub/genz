@@ -4,7 +4,7 @@
       <img src="../assets/logoII.png" alt="edtwist logo" class="logo">
     </div>
     <form action="#" class="search">
-      <input type="text" class="search__input" placeholder="Generate Y">
+      <input type="text" class="search__input" v-model="input" placeholder="Generate Y">
       <button class="search__button">
         <svg xmlns="http://www.w3.org/2000/svg" class="search__icon icon icon-tabler icon-tabler-search" width="20" height="20" viewBox="0 0 20 20" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z"/>
@@ -48,6 +48,7 @@ export default {
   data() {
     return {
       char: 'F',
+      input: 'Generation Y',
     };
   },
 };

@@ -16,7 +16,7 @@
         <li class="cards_item">
           <div class="card">
             <div class="card_profile">
-                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://images.unsplash.com/photo-1500522144261-ea64433bbe27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://res.cloudinary.com/jidecloudy/image/upload/v1607007232/genner/khan_f9agm0.png)">
                 </div>
                 <div>
                   <p class="card_profile_name">Khan Academy</p>
@@ -49,7 +49,7 @@
         <li class="cards_item">
           <div class="card">
             <div class="card_profile">
-                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://images.unsplash.com/photo-1500522144261-ea64433bbe27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://res.cloudinary.com/jidecloudy/image/upload/v1607007232/genner/nyplII_ca8swo.png)">
                 </div>
                 <div>
                   <p class="card_profile_name">New York Public Library</p>
@@ -99,7 +99,7 @@
         <li class="cards_item">
           <div class="card">
             <div class="card_profile">
-                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://images.unsplash.com/photo-1500522144261-ea64433bbe27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=751&q=80)">
+                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://res.cloudinary.com/jidecloudy/image/upload/v1607007482/genner/YouTube-icon-SVG_boevhz.png)">
                 </div>
                 <div>
                   <p class="card_profile_name">Youtube</p>
