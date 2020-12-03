@@ -95,6 +95,7 @@ export default {
     &:last-child {
       .side-nav__link{
         padding: .2rem 3rem;
+        text-align: left;
       }
     }
 
@@ -104,6 +105,7 @@ export default {
       &:last-child {
         overflow: scroll;
         .side-nav__link{
+          text-align: center;
           // padding: 0;
         };
       }

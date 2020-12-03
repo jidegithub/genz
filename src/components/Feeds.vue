@@ -27,7 +27,7 @@
           feedPost="Kaplan, a well known figure in the computer industry, founded in GO corporation
             in 1987, and for several years it was the one if the the hostest new  ventures in the
             valley. Startup tells story of kaplan's wild ride: how he assembled a brillaint but
-            fractious team of engineers, software designers, and investors; pioneered the emerging 
+            fractious team of engineers, software designers, and investors; pioneered the emerging
             market for hand-held computers operated with a pen instead of a keyboard; and careened
             from crisis to crisis without ever losing his passion for a revolutionary idea.
           The other possibilty is that tilt doesn't give a shit

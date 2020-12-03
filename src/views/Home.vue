@@ -16,7 +16,7 @@
             type='email'
             placeholder='info@mailaddress.com'
             name='email'
-            v-model='credential.email'
+            v-model='email'
           />
         </div>
 
@@ -26,12 +26,12 @@
             type='password'
             name='password'
             placeholder='password'
-            v-model='credential.password'
+            v-model='password'
           />
         </div>
 
         <div class='form__field'>
-          <button class='btn primary' type='submit'>
+          <button @click="handleFormSubmit" class='btn primary' type='submit'>
             <span>Login</span>
           </button>
         </div>
@@ -63,10 +63,8 @@ export default {
       client_id: process.env.VUE_APP_CLIENT_ID,
       isInit: false,
       isSignIn: false,
-      credential: {
-        email: '',
-        password: '',
-      },
+      email: '',
+      password: '',
       disable: false,
       notificationMsg: '',
     };
@@ -75,14 +73,18 @@ export default {
     OnGoogleAuthSuccess(idToken) {
       this.$router.push('/dashboard');
       this.isSignIn = this.$gAuth.isAuthorized;
-      console.log(idToken);
+      // console.log(idToken);
       this.$router.push('/dashboard');
-      // Receive the idToken and make your magic with the backend
     },
     OnGoogleAuthFail(error) {
       console.log(error);
     },
-    handleFormSubmit() {
+    handleFormSubmit(e) {
+      e.preventDefault();
+      if (this.email && this.password) {
+        this.$router.push("/dashboard");
+      }
+      return null;
     },
     resetForm() {
       this.email = '';
