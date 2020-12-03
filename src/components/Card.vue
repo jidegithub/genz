@@ -67,12 +67,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .cards_item {
-  display: flex;
-  height: 100%;
-}
-
-.card {
+  .card {
   background-color: white;
   border-radius: 7px;
   box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
@@ -191,8 +186,7 @@ export default {
     flex-shrink:0;
     // width: 95%;
   }
-  span {
-  }
+
   .tour_description{
       display: flex;
       flex-direction: column;
@@ -234,3 +228,4 @@ export default {
     }
   }
 </style>
+

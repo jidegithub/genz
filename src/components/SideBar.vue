@@ -183,7 +183,7 @@ export default {
     font-weight: 600;
 
     @media only screen and (max-width: $bp-medium) {
-      justify-content: center;
+      justify-content: space-around;
       padding: 2rem;
     }
 
