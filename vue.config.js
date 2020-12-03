@@ -1,3 +1,5 @@
+const ansiRegex = require('ansi-regex');
+
 module.exports = {
   css: {
     loaderOptions: {
@@ -9,4 +11,5 @@ module.exports = {
       // },
     },
   },
+  transpileDependencies: [ansiRegex]
 };
