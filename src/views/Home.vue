@@ -76,32 +76,10 @@ export default {
       this.isSignIn = this.$gAuth.isAuthorized;
       console.log(idToken);
       this.$router.push('/dashboard');
-      this.handleClickSignIn()
       // Receive the idToken and make your magic with the backend
     },
     OnGoogleAuthFail(error) {
       console.log(error);
-    },
-    async handleClickSignIn() {
-      try {
-        const googleUser = await this.$gAuth.signIn();
-        if (!googleUser) {
-          return null;
-        }
-        console.log('googleUser', googleUser);
-        console.log('getId', googleUser.getId());
-        console.log('getBasicProfile', googleUser.getBasicProfile());
-        console.log('getAuthResponse', googleUser.getAuthResponse());
-        console.log(
-          'getAuthResponse',
-          this.$gAuth.GoogleAuth.currentUser.get().getAuthResponse(),
-        );
-        this.isSignIn = this.$gAuth.isAuthorized;
-      } catch (error) {
-        //on fail do something
-        console.error(error);
-        return null;
-      }
     },
     handleFormSubmit() {
     },
