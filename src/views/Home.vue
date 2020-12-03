@@ -155,6 +155,7 @@ align-items: center;
 margin: 0 5px;
 height: 35px;
 width: 35px;
+cursor: pointer;
 }
 
 .disable {
