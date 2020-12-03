@@ -17,7 +17,6 @@
             placeholder='info@mailaddress.com'
             name='email'
             v-model='credential.email'
-            required
           />
         </div>
 
@@ -28,7 +27,6 @@
             name='password'
             placeholder='password'
             v-model='credential.password'
-            required
           />
         </div>
 
@@ -39,6 +37,7 @@
         </div>
 
         <div class="social-container">
+          <div class="g-signin2" data-onsuccess="onSignIn"></div>
           <button v-google-signin-button="clientId" class="google-signin-button social">
             <img src="../assets/search.svg" alt="google logo">
           </button>
