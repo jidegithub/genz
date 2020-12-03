@@ -83,7 +83,7 @@ export default {
       this.$router.push('/dashboard');
       this.isSignIn = this.$gAuth.isAuthorized;
       console.log(idToken);
-      console.log(this.isSignIn)
+      this.$router.push('/dashboard');
       // Receive the idToken and make your magic with the backend
     },
     OnGoogleAuthFail(error) {
