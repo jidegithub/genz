@@ -71,6 +71,7 @@ export default {
   methods: {
     OnGoogleAuthSuccess(idToken) {
       console.log(idToken);
+      this.$router.push('/dashboard');
       // Receive the idToken and make your magic with the backend
     },
     OnGoogleAuthFail(error) {
