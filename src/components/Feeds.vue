@@ -13,99 +13,54 @@
         <div class="flex-item tour_image"><img src="../assets/search.png"></div>
       </div>
       <div class="late-night">
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_profile">
-                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://res.cloudinary.com/jidecloudy/image/upload/v1607007232/genner/khan_f9agm0.png)">
-                </div>
-                <div>
-                  <p class="card_profile_name">Khan Academy</p>
-                </div>
-            </div>
-            <div class="card_content">
-              <h2 class="card_title">Late night Ideas</h2>
-              <p class="card_text">The other possibilty is that tilt doesn't give a shit
-              about me, since i'm a man over the age of 37. it's those those darn
-              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
-              wish to woo.
-              </p>
-              <section class="card_interact">
-                <button class="btn card_btn">Repost</button>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle" width="6" height="6" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z"/>
-                    <circle cx="12" cy="12" r="9"/>
-                  </svg>
-                  <button class="btn card_btn">Share</button>
-              </section>
-              <section class="card_comment_box">
-                <FirstChar :character="char" :width="1.9" :height="1.9" :fontSize="2"/>
-                <input type="text" class="search__input" placeholder="Add a comment">
-              </section>
-            </div>
-          </div>
-        </li>
+        <Card
+          feedPost="The other possibilty is that tilt doesn't give a shit about me,
+          since i'm a man over the age of 37. it's those those darn millenials,
+          raised on shrieking commercials and brain-rotting soda pop, that they wish to woo."
+          source_image="https://res.cloudinary.com/jidecloudy/image/upload/v1607007232/genner/khan_f9agm0.png"
+          source="Khan Academy"
+          title="Late night Ideas"
+        />
       </div>
       <div class="silicon">
-        <li class="cards_item">
-          <div class="card">
-            <div class="card_profile">
-                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://res.cloudinary.com/jidecloudy/image/upload/v1607007232/genner/nyplII_ca8swo.png)">
-                </div>
-                <div>
-                  <p class="card_profile_name">New York Public Library</p>
-                </div>
-            </div>
-            <div class="card_content">
-              <h2 class="card_title">A Silicon Valley adventure</h2>
-              <p class="card_text">The other possibilty is that tilt doesn't give a shit
-              about me, since i'm a man over the age of 37. it's those those darn
-              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
-              wish to woo.
-              about me, since i'm a man over the age of 37. it's those those darn
-              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
-              wish to woo.
-              wish to woo.
-              about me, since i'm a man over the age of 37. it's those those darn
-              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
-              wish to woo.
-              wish to woo.
-              about me, since i'm a man over the age of 37. it's those those darn
-              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
-              wish to woo.
-              wish to woo.
-              about me, since i'm a man over the age of 37. it's those those darn
-              millenials, raised on shrieking commercials and brain-rotting soda pop, that they
-              wish to woo.
-              wish to woo.
-              about me, since i'm a man over the age of 37. it's those those darn
-              </p>
-              <section class="card_interact">
-                <button class="btn card_btn">Repost</button>
-                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle" width="6" height="6" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z"/>
-                    <circle cx="12" cy="12" r="9"/>
-                  </svg>
-                  <button class="btn card_btn">Share</button>
-              </section>
-              <section class="card_comment_box">
-                <FirstChar :character="char" :width="1.9" :height="1.9" :fontSize="2"/>
-                <input type="text" class="search__input" placeholder="Add a comment">
-              </section>
-            </div>
-          </div>
-        </li>
+        <Card
+          feedPost="The other possibilty is that tilt doesn't give a shit
+            about me, since i'm a man over the age of 37. it's those those darn
+            millenials, raised on shrieking commercials and brain-rotting soda pop, that they
+            wish to woo.
+            about me, since i'm a man over the age of 37. it's those those darn
+            millenials, raised on shrieking commercials and brain-rotting soda pop, that they
+            wish to woo.
+            wish to woo.
+            about me, since i'm a man over the age of 37. it's those those darn
+            millenials, raised on shrieking commercials and brain-rotting soda pop, that they
+            wish to woo.
+            wish to woo.
+            about me, since i'm a man over the age of 37. it's those those darn
+            millenials, raised on shrieking commercials and brain-rotting soda pop, that they
+            wish to woo.
+            wish to woo.
+            about me, since i'm a man over the age of 37. it's those those darn
+            millenials, raised on shrieking commercials and brain-rotting soda pop, that they
+            wish to woo.
+            wish to woo.
+            about me, since i'm a man over the age of 37. it's those those darn"
+          source_image="https://res.cloudinary.com/jidecloudy/image/upload/v1607007232/genner/nyplII_ca8swo.png"
+          source="New York Public Library"
+          title="A Silicon Valley adventure"
+        />
       </div>
       <div class="youtube">
         <li class="cards_item">
           <div class="card">
             <div class="card_profile">
-                <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://res.cloudinary.com/jidecloudy/image/upload/v1607007482/genner/YouTube-icon-SVG_boevhz.png)">
-                </div>
-                <div>
-                  <p class="card_profile_name">Youtube</p>
-                </div>
+              <div class="card_profile_image bg-cover bg-center rounded-full" style="background-image: url(https://res.cloudinary.com/jidecloudy/image/upload/v1607007482/genner/YouTube-icon-SVG_boevhz.png)">
+              </div>
+              <div>
+                <p class="card_profile_name">Youtube</p>
+              </div>
             </div>
-            <div class="card_image"><img src="../assets//youtube.png"></div>
+            <div class="card_image"><img src="../assets/youtube.png"></div>
           </div>
         </li>
       </div>
@@ -114,12 +69,13 @@
 </template>
 
 <script>
-import FirstChar from './FirstChar.vue';
+// import feeds from '../assets/data/feed.json';
+import Card from './Card.vue';
 
 export default {
   name: 'feeds',
   components: {
-    FirstChar,
+    Card,
   },
   data() {
     return {
