@@ -8,9 +8,9 @@
         method='post'
         class='form'
       >
-      <div class="brand"></div>
-      <h2 class="">Sign into your account</h2>
-        <label class="" for="email">Email Address</label>
+      <div class='brand'></div>
+      <h2 class=''>Sign into your account</h2>
+        <label class='' for='email'>Email Address</label>
         <div class='form__field'>
           <input
             type='email'
@@ -20,7 +20,7 @@
           />
         </div>
 
-        <label class="" for="password">Password</label>
+        <label class='' for='password'>Password</label>
         <div class='form__field'>
           <input
             type='password'
@@ -31,19 +31,19 @@
         </div>
 
         <div class='form__field'>
-          <button class="primary" type="submit">
+          <button class='primary' type='submit'>
             <span>Login</span>
           </button>
         </div>
 
-        <div class="social-container">
-          <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
-          <button v-google-signin-button="client_id" class="google-signin-button social">
-            <img src="../assets/search.svg" alt="google logo">
+        <div class='social-container'>
+          <!-- <div class='g-signin2' data-onsuccess='onSignIn'></div> -->
+          <button v-google-signin-button='client_id' class='google-signin-button social'>
+            <img src='../assets/search.svg' alt='google logo'>
           </button>
-          <button class="social"><img src="../assets/linkedin.svg" alt="linkedin"></button>
+          <button class='social'><img src='../assets/linkedin.svg' alt='linkedin'></button>
         </div>
-        <div class="form_signup">
+        <div class='form_signup'>
           <p>
             Don't have an account? <a to='/signup'>Signup here</a>
           </p>
@@ -54,12 +54,14 @@
 </template>
 
 <script>
-
+/* eslint-disable */
 export default {
   name: 'login',
   data() {
     return {
       client_id: process.env.VUE_APP_CLIENT_ID,
+      isInit: false,
+      isSignIn: false,
       credential: {
         email: '',
         password: '',
@@ -68,13 +70,54 @@ export default {
       notificationMsg: '',
     };
   },
+  created() {
+    const that = this;
+    const checkGauthLoad = setInterval(function () {
+      that.isInit = that.$gAuth.isInit;
+      that.isSignIn = that.$gAuth.isAuthorized;
+      if (that.isInit) clearInterval(checkGauthLoad);
+    }, 1000);
+  },
   methods: {
     OnGoogleAuthSuccess(idToken) {
+      this.$router.push('/dashboard');
+      this.isSignIn = this.$gAuth.isAuthorized;
       console.log(idToken);
+      console.log(this.isSignIn)
       // Receive the idToken and make your magic with the backend
     },
     OnGoogleAuthFail(error) {
       console.log(error);
+    },
+    async handleClickSignIn() {
+      try {
+        const googleUser = await this.$gAuth.signIn();
+        if (!googleUser) {
+          return null;
+        }
+        console.log('googleUser', googleUser);
+        console.log('getId', googleUser.getId());
+        console.log('getBasicProfile', googleUser.getBasicProfile());
+        console.log('getAuthResponse', googleUser.getAuthResponse());
+        console.log(
+          'getAuthResponse',
+          this.$gAuth.GoogleAuth.currentUser.get().getAuthResponse(),
+        );
+        this.isSignIn = this.$gAuth.isAuthorized;
+      } catch (error) {
+        //on fail do something
+        console.error(error);
+        return null;
+      }
+    },
+    async handleClickSignOut() {
+      try {
+        await this.$gAuth.signOut();
+        this.isSignIn = this.$gAuth.isAuthorized;
+        console.log('isSignIn', this.$gAuth.isAuthorized);
+      } catch (error) {
+        console.error(error);
+      }
     },
     handleFormSubmit() {
     },
@@ -88,7 +131,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 .login-cont{
   height: 100vh;
   width: 100vw;
@@ -182,7 +225,7 @@ button.primary {
   font-weight: 700;
   height: 30px;
 }
-button, [type="button"], [type="reset"], [type="submit"] {
+button, [type='button'], [type='reset'], [type='submit'] {
   -webkit-appearance: button;
 }
 button {
