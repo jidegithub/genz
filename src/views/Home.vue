@@ -37,8 +37,8 @@
         </div>
 
         <div class="social-container">
-          <div class="g-signin2" data-onsuccess="onSignIn"></div>
-          <button v-google-signin-button="clientId" class="google-signin-button social">
+          <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+          <button v-google-signin-button="client_id" class="google-signin-button social">
             <img src="../assets/search.svg" alt="google logo">
           </button>
           <button class="social"><img src="../assets/linkedin.svg" alt="linkedin"></button>
@@ -54,16 +54,12 @@
 </template>
 
 <script>
-import GoogleSignInButton from 'vue-google-signin-button-directive';
 
 export default {
   name: 'login',
-  directives: {
-    GoogleSignInButton,
-  },
   data() {
     return {
-      clientId: process.env.CLIENT_ID,
+      client_id: process.env.VUE_APP_CLIENT_ID,
       credential: {
         email: '',
         password: '',
