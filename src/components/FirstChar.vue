@@ -1,7 +1,7 @@
 <template>
   <div class="circle" :style="{
-  width: width + 'em',
-  height: height + 'em',
+  width: width + 'px',
+  height: height + 'px',
   fontSize: fontSize + 'rem' }">
     <p class="circle_char">{{character}}</p>
   </div>

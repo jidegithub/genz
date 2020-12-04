@@ -23,7 +23,7 @@
         </svg>
       </div>
       <div class="user-nav__icon-box">
-        <svg xmlns="http://www.w3.org/2000/svg" class=" icon icon-tabler icon-tabler-circle-plus" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <svg xmlns="http://www.w3.org/2000/svg" class=" icon icon-tabler icon-tabler-circle-plus" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
           <path stroke="none" d="M0 0h24v24H0z"/>
           <circle fill="#7A65FF" cx="12" cy="12" r="9"/>
           <line x1="9" y1="12" fill="#fff" x2="15" y2="12"/>
@@ -31,7 +31,7 @@
         </svg>
       </div>
       <div class="user-nav__user">
-        <FirstChar :character="char" :width="1.5" :height="1.5" :fontSize="2" />
+        <FirstChar :character="char" :width="35" :height="35" :fontSize="1.8" />
       </div>
     </nav>
   </header>
@@ -145,6 +145,10 @@ export default {
   @include flex-vertical-center;
   justify-content: flex-end;
   flex: 0 0 52%;
+
+  @media only screen and (max-width: $bp-smallest) {
+    flex: auto;
+  }
 
   & > * {
     padding: 0 .4rem;

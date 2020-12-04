@@ -24,7 +24,7 @@
             <button class="btn card_btn">Share</button>
         </section>
         <section class="card_comment_box">
-          <FirstChar :character="char" :width="1.9" :height="1.9" :fontSize="2"/>
+          <FirstChar :character="char" :width="35" :height="35" :fontSize="2"/>
           <input type="text" class="search__input" placeholder="Add a comment">
         </section>
       </div>
