@@ -4,7 +4,7 @@
       <div class="card_profile">
           <div
             class="card_profile_image bg-cover bg-center rounded-full"
-            style="{backgroundImage: `url(${source_image})`}">
+            :style="{backgroundImage: `url(${source_image})`}">
           </div>
           <div>
             <p class="card_profile_name">{{ source }}</p>
